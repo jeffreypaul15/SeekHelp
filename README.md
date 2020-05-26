@@ -15,3 +15,5 @@ See(k) Help : An App For The Blind And Visually Impaired.
 3. Run test_req.py and wait for it to deploy
 4. Choose language of choice and the image to be checked.
 5. After clicking on 'listen' wait for 5-10 seconds for the audio to play on the webpage.
+
+### Training the model : All training files has been included in the 'models_to_train' folder, courtesy of [Harshall Lamba](https://github.com/hlamba28/Automatic-Image-Captioning/blob/master/Automatic%20Image%20Captioning.ipynb)
