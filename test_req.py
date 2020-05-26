@@ -1,12 +1,10 @@
-from keras.models import load_model
 from keras.applications.inception_v3 import preprocess_input
 import numpy as np
 from keras.preprocessing import image
 from keras.preprocessing.sequence import pad_sequences
 import json
-from flask import Flask, render_template, Response, request
+from flask import Flask, request
 import tensorflow as tf
-from tensorflow import keras
 from flask import send_file
 from ibm_watson import TextToSpeechV1
 from ibm_watson import LanguageTranslatorV3
