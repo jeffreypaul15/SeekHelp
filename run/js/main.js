@@ -1,10 +1,11 @@
-    var form = document.getElementById('sendImg')
-    
-const url = "http://localhost:5000/test"
-console.log("????")
+var form = document.getElementById('sendImg')
+var preloader = document.querySelector('.preloader')
+const url = "http://192.168.0.102:5000/test"
+
 
 
 form.addEventListener('submit',(e)=>{
+    preloader.style['display'] = 'block';
     e.preventDefault()
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url); 
@@ -16,6 +17,8 @@ form.addEventListener('submit',(e)=>{
         console.log(aurl);
         window.audio = new Audio();
         window.audio.src = aurl;
+        preloader.style['display'] = 'none';
+        Materialize.toast('Playing Audio', 3000, 'rounded');
         window.audio.play();   
     }; 
     // or onerror, onabort

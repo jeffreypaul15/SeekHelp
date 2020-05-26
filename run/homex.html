@@ -122,26 +122,45 @@
               position: relative;
                 opacity: 0;
                 width: 100%;
-                height: 10000px;
+                height: 300px;
                 z-index: 1000;   
             }
-        
+            ul.dropdown-content.select-dropdown li span {
+            color:#0043ce; /* no need for !important :) */
+            }
+            /* preloader */
+            .preloader{
+              position: absolute;
+              background-image: url("preloader/loading4.gif");
+              opacity: 0.85;
+              display: none;
+              top:0px;
+              left:0px;
+              height: 100%;
+              width: 100%;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              
+            }
             </style>
    </head>
    
-   <body class = "container">   
+   <body >  
+      
+  <div class="container">  
        <br><br>
       <div class = "row">
          <form class = "sendImg col s12" id="sendImg" name="uploadfile" method="POST" enctype=multipart/form-data>
             
           <div class = "top">
             <label>Select language</label>
-               <select name="lang">
-                  <option value = "en-US_MichaelV3Voice" selected>English</option>
-                  <option value = "fr-FR_ReneeV3Voice">French</option>
-                  <option value = "de-DE_DieterVoice">German</option>
-                  <option value = "ko-KR_YoungmiVoice">Korean</option>
-              <option value = "es-ES_EnriqueVoice">Spanish</option>
+               <select name="lang" class="blue-text dropdown onlyonce">
+                  <option  value = "en-US_MichaelV3Voice" selected> English</option>
+                  <option  value = "fr-FR_ReneeV3Voice">French</option>
+                  <option  value = "de-DE_DieterVoice">German</option>
+                  <option  value = "ko-KR_YoungmiVoice">Korean</option>
+              <option  value = "es-ES_EnriqueVoice">Spanish</option>
                </select>               
             </div>
             <div class="topnav">
@@ -152,18 +171,21 @@
             <div class='start'>
                 <div class='side2' >
             
-                    <div id='backdrop'><input type='file' name="uploadfile"  class='btn'/></div>
-                    <div id='curtain'><p class='ssd' style="justify-content: center; text-align: center;"> Upload / Take a picture</p></div>
+                    <div id='backdrop'><input type='file' name="uploadfile"  class='btn onlyonce'/></div>
+                    <div id='curtain' class="onlyonce"><p class='ssd' style="justify-content: center; text-align: center;"> Upload / Take a picture</p></div>
                 </div>
                 <div class='side1'>
-                     <div id='curtain'><p class='ssd'style="justify-content: center; text-align: center;"> Listen </p></div>
-                    <input class="btn" type="submit" value=Upload>
+                     <div id='curtain'><p class='ssd onlyonce'style="justify-content: center; text-align: center;"> Listen </p></div>
+                    <input class="btn onlyonce" type="submit" value=Upload>
                 </div>  
             </div>
                     <!-- <button class="side1" type="submit"><span class='scam'>Listen</span></button> -->
 
-            </form>    
-      </div>
+            </form>  
+             
+          </div>
+          <div class="preloader"></div> 
+    </div>
   <script src="js/main.js"></script>
    </body>   
 </html>
