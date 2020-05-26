@@ -1,6 +1,6 @@
-# IBM Call For Code 2020
+# IBM Call For Code 2020 
 
-## See(k) Help : An App For The Blind And Visually Impaired.
+See(k) Help : An App For The Blind And Visually Impaired.
 
 ## Steps to Run the Project:
 
