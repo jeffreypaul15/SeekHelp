@@ -1,14 +1,17 @@
-# IBMCFC
+# IBM Call For Code 2020 
 
-## Steps to run the file:-
+See(k) Help : An App For The Blind And Visually Impaired.
 
-**Firstly, install dependencies mentioned in requirements.txt**
+## Steps to Run the Project:
+
+**First, install dependencies mentioned in requirements.txt**
 
 > pip install -r requirements.txt
 
 
-1. Make a folder called 'models' in root directory.
-2. Download the both 'inception' and 'prediction.h5' from [here](https://drive.google.com/open?id=1xSfaPYT7tZAN9sQZovjkeVF8jvLzmOSo) and place them in 'models' directory.
-3. Open homex.html (located in the 'run' folder) in a browser.
-4. Run test_req.py and wait for it to deploy
-5. After clicking on 'listen' wait for 5-10 seconds for the audio to play on webpage.
+
+1. Download both 'inception' and 'prediction.h5' from [here](https://drive.google.com/drive/folders/1xSfaPYT7tZAN9sQZovjkeVF8jvLzmOSo) and place them in 'models' directory.
+2. Open homex.html (located in the 'run' folder) in a browser.
+3. Run test_req.py and wait for it to deploy
+4. Choose language of choice and the image to be checked.
+5. After clicking on 'listen' wait for 5-10 seconds for the audio to play on the webpage.
