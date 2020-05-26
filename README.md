@@ -9,6 +9,7 @@ See(k) Help : An App For The Blind And Visually Impaired.
 > pip install -r requirements.txt
 
 
+
 1. Download both 'inception' and 'prediction.h5' from [here](https://drive.google.com/drive/folders/1xSfaPYT7tZAN9sQZovjkeVF8jvLzmOSo) and place them in 'models' directory.
 2. Open homex.html (located in the 'run' folder) in a browser.
 3. Run test_req.py and wait for it to deploy
