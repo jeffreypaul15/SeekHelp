@@ -86,6 +86,8 @@ def greedySearch(photo):
     return final
 
 def get_lang(text, lang):
+    if lang == 'en-US_MichaelV3Voice':
+        return text
     lang = lang[0:2]
     lang = 'en-'+lang
     translation = language_translator.translate(
