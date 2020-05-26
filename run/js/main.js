@@ -1,6 +1,6 @@
 var form = document.getElementById('sendImg')
 var preloader = document.querySelector('.preloader')
-const url = "http://192.168.0.102:5000/test"
+const url = "http://localhost:5000/test"
 
 
 
