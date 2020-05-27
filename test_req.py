@@ -12,23 +12,28 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 import os
 from flask_cors import CORS
 
-authenticator = IAMAuthenticator('ee-h6zbBluyPLbkW_FxyV2hpfpZ1mo1UM_sq9K8XQAxU')
+f = open('api/text2speech.txt', 'r')
+api_t2s = json.loads((f.readline())[0:-1])
+url_t2s = json.loads((f.readline()))
+
+authenticator = IAMAuthenticator(api_t2s['apikey'])
 text_to_speech = TextToSpeechV1(
     authenticator=authenticator
 )
 
+text_to_speech.set_service_url(url_t2s['url'])
 
-Lang_auth = IAMAuthenticator('czrVWPO9MNtdHFEO1o7lxxi-FjFyE9YRSI-c5Qr2_PiG')
+f = open('api/language_translator.txt', 'r')
+api_lang = json.loads((f.readline())[0:-1])
+url_lang = json.loads((f.readline()))
+
+Lang_auth = IAMAuthenticator(api_lang['apikey'])
 language_translator = LanguageTranslatorV3(
     version='2018-05-01',
     authenticator=Lang_auth
 )
 
-language_translator.set_service_url('https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/0bb973e5-fae9-4da7-9977-948bb697df55')
-
-
-
-text_to_speech.set_service_url('https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/5ab89087-3fd4-404a-9551-2f2ab113e515')
+language_translator.set_service_url(url_lang['url'])
 
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
