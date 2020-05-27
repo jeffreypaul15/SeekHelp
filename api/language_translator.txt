@@ -1,0 +1,2 @@
+{"apikey" : "6gM5uClJ73-VQmeceP43ABDrc9u9DbqQtkzdjqBwNR4X" }
+{"url" : "https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/fb27d016-ba9b-4281-aba9-9111f2f9137b" }

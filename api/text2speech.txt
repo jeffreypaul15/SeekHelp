@@ -1,0 +1,2 @@
+{"apikey" : "yWKSQ4TXrbNeFY2T0GZ5swK5vq9xC8keA6ySnp78go38" }
+{"url" : "https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/4963a356-d2e5-48ed-9b61-a20574cccae5" }
