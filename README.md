@@ -60,3 +60,5 @@ Click [here](https://www.youtube.com/watch?v=P_XU4UL041Y) for a demo of the app.
 
 ### Model
 All training files has been included in the 'models_to_train' folder, with inspiration from [Harshall Lamba](https://github.com/hlamba28/Automatic-Image-Captioning/blob/master/Automatic%20Image%20Captioning.ipynb)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
