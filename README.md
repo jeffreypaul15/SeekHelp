@@ -1,6 +1,3 @@
-# IBM Call For Code 2020 
-
-
 <img src ="media/VideoTitle.jpg">
 
 ## A Brief Overview
