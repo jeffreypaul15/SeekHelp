@@ -5,7 +5,7 @@ from keras.preprocessing.sequence import pad_sequences
 import json
 from flask import Flask, request
 import tensorflow as tf
-from flask import send_file
+from flask import send_file, render_template
 from ibm_watson import TextToSpeechV1
 from ibm_watson import LanguageTranslatorV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
@@ -69,9 +69,6 @@ def encode(image):
     return fea_vec
 
 
-
-
-
 def greedySearch(photo):
     in_text = 'startseq'
     for i in range(max_length):
@@ -102,7 +99,7 @@ def get_lang(text, lang):
 
 
 aa = {}
-app = Flask(__name__)
+app = Flask(__name__, template_folder="./run")
 CORS(app)
 @app.route('/test', methods=['GET', 'POST'])
 def upload_file():
@@ -129,7 +126,6 @@ def upload_file():
         text = get_lang(data_to_send, request.form['lang'] )
 
         
-
         with open('hello_world.wav', 'wb') as audio_file:
             audio_file.write(
                 text_to_speech.synthesize(
@@ -143,11 +139,13 @@ def upload_file():
          mimetype="audio/wav", 
          as_attachment=True, 
          attachment_filename="test.wav")
+    else:
+            return render_template('homex.html')
         
         
 @app.route('/')
 def asd():
-    return "Failure"
+    return render_template('')
 
 
 app.run('0.0.0.0',debug=True)

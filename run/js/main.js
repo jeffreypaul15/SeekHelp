@@ -5,13 +5,14 @@ const url = "http://localhost:5000/test"
 
 
 form.addEventListener('submit',(e)=>{
+    console.log("hello");
     preloader.style['display'] = 'block';
     e.preventDefault()
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url); 
 
     xhr.responseType = 'blob';
-    xhr.onload = function(event){ 
+    xhr.onload = function(event){
         var blob = new Blob([this.response.value,{type: 'audio/wav'}])
         const aurl = window.URL.createObjectURL(this.response);
         console.log(aurl);
